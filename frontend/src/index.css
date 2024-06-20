@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.room-detail::before {
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: -1;
+  background-color: #2E97A7;
+  transition: transform 400ms ease-in-out;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.room-detail:hover::before,
+.room-detail:focus::before {
+  transform: scaleX(1);
+}
+.room-detail {
+  z-index: 1;
+}
+
+.room-detail:hover,
+.room-detail:focus {
+  color: white;
+}
